@@ -51,7 +51,7 @@ public class Gramatica {
         }
 
         //Sirul trebuie sa inceapa cu 'S'
-        //GramaticaExceptii.verificareAxioma(text);
+        GramaticaExceptii.verificareAxioma(text);
 
         // Caractere permise: litere + $, @, &
         GramaticaExceptii.verificareCaractere(text);
