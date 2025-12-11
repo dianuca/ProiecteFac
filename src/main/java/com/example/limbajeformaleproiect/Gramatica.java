@@ -123,11 +123,9 @@ public class Gramatica {
             // parcurgem partea dreapta a productiei
             for (int j = 0; j < parteDreapta.length(); j++) {
                 char simbol = parteDreapta.charAt(j);
-
-                if (simbol == '@') {// multimea vida, nu se adauga nicaieri
-                    continue;
+                if (simbol == '@' && !contineCaracter(terminale, nrTerminale, simbol)) {// multimea vida, nu se adauga nicaieri
+                    terminale[nrTerminale++] = simbol;
                 }
-
                 //verificam daca caracterul mai exista in vectorul de neterminale, respectiv terminale
                 if (Character.isUpperCase(simbol)) { // neterminal in partea dreapta
                     if (simbol != simbolStart &&
@@ -168,7 +166,11 @@ public class Gramatica {
         // V_T
         sb.append("V_T = {");
         for (int i = 0; i < nrTerminale; i++) {
-            sb.append(terminale[i]);
+            if (terminale[i] == '@') {
+                sb.append("λ");
+            }
+            else
+                sb.append(terminale[i]);
             if (i < nrTerminale - 1) sb.append(", ");
         }
         sb.append("}\n\n");
