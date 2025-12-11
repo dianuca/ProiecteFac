@@ -34,7 +34,7 @@ public class Main extends Application {
 
         String textReguli =
                 "Reguli de citire:\n" +
-                        "1. Primul simbol din prima producție reprezintă axioma (simbolul de start) S.\n" +
+                        "1. Primul simbol din prima producție reprezintă axioma (simbolul de start).\n" +
                         "2. Simbolul de separare dintre producții este '$'.\n" +
                         "3. Simbolurile neterminale sunt litere mari (A..Z).\n" +
                         "4. Simbolurile terminale sunt litere mici (a..z).\n" +

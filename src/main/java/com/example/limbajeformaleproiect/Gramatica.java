@@ -51,7 +51,7 @@ public class Gramatica {
         }
 
         //Sirul trebuie sa inceapa cu 'S'
-        GramaticaExceptii.verificareAxioma(text);
+        //GramaticaExceptii.verificareAxioma(text);
 
         // Caractere permise: litere + $, @, &
         GramaticaExceptii.verificareCaractere(text);
@@ -153,7 +153,7 @@ public class Gramatica {
     public String Print() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Simbol de start S = ").append(simbolStart).append("\n\n");
+        sb.append("Simbol de start = ").append(simbolStart).append("\n\n");
 
         // V_N
         sb.append("V_N = {");
